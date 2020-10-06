@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<favorites>
+
+    <!-- screen [0] -->
+    <appwidget
+        className="com.google.android.googlequicksearchbox.SearchWidgetProvider"
+        packageName="com.google.android.googlequicksearchbox"
+        screen="1"
+        spanX="3"
+        spanY="1"
+        x="0"
+        y="0" />
+
+    <appwidget
+        className="com.asus.weathertime.WeatherWidgetProviderPhoneThree"
+        packageName="com.asus.weathertime"
+        screen="1"
+        spanX="3"
+        spanY="2"
+        x="0"
+        y="1" />
+
+    <appwidget
+        className="com.android.contacts.miniwidget.ContactsWidget"
+        packageName="com.asus.contacts"
+        screen="1"
+        spanX="2"
+        spanY="2"
+        x="4"
+        y="0" />
+
+    <appwidget
+        className="com.asus.supernote.widget.WidgetOneProvider"
+        packageName="com.asus.supernote"
+        screen="1"
+        spanX="2"
+        spanY="2"
+        x="4"
+        y="2" />
+
+    <favorite
+        className="com.asus.mobilemanager.task.BoostShortcut"
+        packageName="com.asus.mobilemanager"
+        screen="1"
+        x="0"
+        y="3" />
+
+    <!-- screen [1] -->
+
+    <favorite
+        className="com.asus.ia.asusapp.MainActivity"
+        packageName="com.asus.ia.asusapp"
+        screen="2"
+        x="0"
+        y="3" />
+
+    <favorite
+        className="com.asus.userfeedback.MainActivity"
+        packageName="com.asus.userfeedback"
+        screen="2"
+        x="1"
+        y="3" />
+
+    <folder
+        screen="2"
+        title="Smart Tools"
+        x="2"
+        y="3" >
+        <favorite
+            className="com.asus.mobilemanager.task.BoostShortcut"
+            packageName="com.asus.mobilemanager" />
+        <favorite
+            className="com.asus.mobilemanager.entry.FunctionActivity"
+            packageName="com.asus.mobilemanager" />
+        <favorite
+            className="com.asus.splendid.AsusSplendidActivity"
+            packageName="com.asus.splendid" />
+        <favorite
+            className="com.asus.maxxaudio.audiowizard.MainActivity"
+            packageName="com.asus.maxxaudio.audiowizard" />
+        <favorite
+            className="com.asus.systemupdate.SystemUpdateActivity"
+            packageName="com.asus.systemupdate" />
+    </folder>
+
+    <favorite
+        className="com.asus.powersaver.PowerSaverSettings"
+        packageName="com.asus.powersaver"
+        screen="2"
+        x="3"
+        y="3" />
+
+    <favorite
+        className="com.asus.mobilemanager.MainActivity"
+        packageName="com.asus.mobilemanager"
+        screen="2"
+        x="4"
+        y="3" />
+
+    <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
+    <folder
+        title="ASUS"
+        container="-101"
+        screen="0"
+        x="0"
+        y="0" >
+        <favorite
+            className="com.asus.gallery.app.EPhotoActivity"
+            packageName="com.asus.gallery" />
+        <favorite
+            className="com.android.contacts.activities.PeopleActivity"
+            packageName="com.asus.contacts" />
+        <favorite
+            className="com.asus.filemanager.activity.FileManagerActivity"
+            packageName="com.asus.filemanager" />
+        <favorite
+            className="com.asus.microfilm.app.MainActivity"
+            packageName="com.asus.microfilm" />
+        <favorite
+            className="com.asus.collage.CollageMainActivity"
+            packageName="com.asus.collage" />
+        <favorite
+            className="com.android.mms.ui.ConversationList"
+            packageName="com.asus.message" />
+        <favorite
+            className="com.asus.weathertime.WeatherTimeSettings"
+            packageName="com.asus.weathertime" />
+        <favorite
+            className="com.android.calendar.AllInOneActivity"
+            packageName="com.asus.calendar" />
+        <favorite
+            className="com.asus.task.activity.TaskActivity"
+            packageName="com.asus.task" />
+        <favorite
+            className="com.asus.deskclock.DeskClock"
+            packageName="com.asus.deskclock" />
+        <favorite
+            className="com.asus.calculator.Calculator"
+            packageName="com.asus.calculator" />
+        <favorite
+            className="com.asus.flashlight.FlashLightMainActivity"
+            packageName="com.asus.flashlight" />
+        <favorite
+            className="com.asus.music.MusicMainActivity"
+            packageName="com.asus.music" />
+        <favorite
+            className="com.asus.sharerim.Main"
+            packageName="com.asus.sharerim" />
+        <favorite
+            className="com.asus.supernote.picker.NoteBookPickerActivity"
+            packageName="com.asus.supernote" />
+        <favorite
+            className="net.yostore.aws.view.common.SplashActivity"
+            packageName="com.ecareme.asuswebstorage" />
+    </folder>
+
+    <folder
+        title="Apps4U"
+        screen="1"
+        container="-101"
+        x="1"
+        y="0" >
+        <favorite
+            className="com.keniu.security.main.MainActivity"
+            packageName="com.cleanmaster.mguard" />
+        <favorite
+            className="ks.cm.antivirus.main.SplashActivity"
+            packageName="com.cleanmaster.security" />
+        <favorite
+            className="com.trendmicro.gameoptimizer.ui.GameManagerActivity"
+            packageName="com.trendmicro.dr.booster" />
+        <favorite
+            className="com.trendmicro.tmmssuite.consumer.login.ui.LandingPage"
+            packageName="com.trendmicro.freetmms.gmobi" />
+        <favorite
+            className="com.amazon.kindle.UpgradePage"
+            packageName="com.amazon.kindle" />
+        <favorite
+            className="com.zinio.mobile.android.reader.ui.activity.SplashScreenActivity"
+            packageName="com.zinio.mobile.android.reader" />
+        <favorite
+            className="com.zinio.mobile.android.reader.view.SplashScreenActivity"
+            packageName="com.zinio.mobile.android.reader" />
+        <favorite
+            className="com.gameloft.android.GloftPZOO.Start"
+            packageName="com.gameloft.android.GloftPZOO" />
+        <favorite
+            className="com.tripadvisor.tripadvisor.TripAdvisorTripAdvisorActivity"
+            packageName="com.tripadvisor.tripadvisor" />
+        <favorite
+            className="com.cloudmosa.app.LemonActivity"
+            packageName="com.cloudmosa.puffinFree" />
+        <favorite
+            className="com.cloudmosa.puffinFree.LemonActivity"
+            packageName="com.cloudmosa.puffinFree" />
+    </folder>
+
+    <favorite
+        className="com.android.browser.BrowserActivity"
+        container="-101"
+        packageName="com.asus.browser"
+        screen="2"
+        x="2"
+        y="0" />
+
+    <favorite
+        className="com.asus.camera.CameraApp"
+        container="-101"
+        packageName="com.asus.camera"
+        screen="4"
+        x="4"
+        y="0" />
+
+    <favorite
+        className="com.android.vending.AssetBrowserActivity"
+        container="-101"
+        packageName="com.android.vending"
+        screen="5"
+        x="5"
+        y="0" />
+
+    <folder
+        title="Google"
+        container="-101"
+        screen="6"
+        x="6"
+        y="0" >
+        <favorite
+            className="com.google.android.googlequicksearchbox.SearchActivity"
+            packageName="com.google.android.googlequicksearchbox" />
+        <favorite
+            className="com.google.android.apps.chrome.Main"
+            packageName="com.android.chrome" />
+        <favorite
+            className="com.google.android.gm.ConversationListActivityGmail"
+            packageName="com.google.android.gm" />
+        <favorite
+            className="com.google.android.maps.MapsActivity"
+            packageName="com.google.android.apps.maps" />
+        <favorite
+            className="com.google.android.youtube.app.honeycomb.Shell$HomeActivity"
+            packageName="com.google.android.youtube" />
+        <favorite
+            className="com.google.android.apps.docs.app.NewMainProxyActivity"
+            packageName="com.google.android.apps.docs" />
+        <favorite
+            className="com.android.music.activitymanagement.TopLevelActivity"
+            packageName="com.google.android.music" />
+        <favorite
+            className="com.google.android.youtube.videos.EntryPoint"
+            packageName="com.google.android.videos" />
+        <favorite
+            className="com.google.android.talk.SigningInActivity"
+            packageName="com.google.android.talk" />
+        <favorite
+            className="com.google.android.apps.photos.home.HomeActivity"
+            packageName="com.google.android.apps.photos" />
+        <favorite
+            className="com.google.android.apps.plus.phone.ConversationListActivity"
+            packageName="com.google.android.apps.plus" />
+        <favorite
+            className="com.google.android.apps.plus.phone.HomeActivity"
+            packageName="com.google.android.apps.plus" />
+        <favorite
+            className="com.google.android.apps.books.app.BooksActivity"
+            packageName="com.google.android.apps.books" />
+        <favorite
+            className="com.google.apps.dots.android.app.activity.CurrentsStartActivity"
+            packageName="com.google.android.apps.magazines" />
+        <favorite
+            className="com.google.android.gms.games.ui.destination.main.MainActivity"
+            packageName="com.google.android.play.games" />
+        <favorite
+            className="com.google.android.apps.docs.app.NewMainProxyActivity"
+            packageName="com.google.android.apps.docs.editors.docs" />
+        <favorite
+            className="com.google.android.apps.docs.app.NewMainProxyActivity"
+            packageName="com.google.android.apps.docs.editors.sheets" />
+        <favorite
+            className="com.google.android.apps.docs.app.NewMainProxyActivity"
+            packageName="com.google.android.apps.docs.editors.slides" />
+    </folder>
+</favorites>

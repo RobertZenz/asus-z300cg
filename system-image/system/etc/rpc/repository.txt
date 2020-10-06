@@ -1,0 +1,40 @@
+#########################################################################
+# repository.txt - rpc configuration file
+# Contains the startup configuration settings for RPC
+#
+# Syntax and rules for this file
+# *) Comments begin with # character until end of line
+# *) Whitespace is ignored (spaces and tabs)
+# *) Lines must be limited to 256 characters
+# *) Section names must be between brackets []
+#    The opening bracket must be in the first column of a line
+#    Case is significant for section names
+# *) Configuration settings are specified by keywords and values
+#    Example: keyword = value
+#    Keywords are specific to each section and case is significant
+#    Values must be entered in decimal or hex
+#    Hex numbers must be prefixed exactly with 0x
+# *) Unknown sections will be ignored
+# *) Unknown keywords will be ignored
+# *) Settings will not take affect if values are omitted or
+#    not in complete decimal or hex format
+#
+# *) List of configuration section names and keywords
+#
+#    section: trace
+#    keywords:
+#             rpc_log_level
+#
+#########################################################################
+
+[trace]
+# Trace log prints for RPC
+# Bit control to enable(1) and disable(0) each level
+# Error prints on               = 0x01 (bit 0)
+# Warning prints on             = 0x02 (bit 1)
+# Debug prints on               = 0x04 (bit 2)
+# Info prints on                = 0x08 (bit 3)
+# Function call prints on       = 0x10 (bit 4)
+# Sensitive info (passwords) on = 0x20 (bit 5)
+# Memory leak Check on          = 0x40 (bit 6)
+rpc_log_level    = 0x00

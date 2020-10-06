@@ -1,0 +1,9 @@
+# Aliases extracted from modules themselves.
+alias idi:v*d000A6200sd00000003* btif_drv
+alias idi:v*d000A6100sd00000003* btif_drv
+alias fs-tntfs tntfs
+alias fs-texfat texfat
+alias sdio:c*v0089d5502* compat_iwlwifi
+alias sdio:c*v0089d7260* compat_iwlwifi
+alias sdio:c*v0089d3160* compat_iwlwifi
+alias net-pf-16-proto-16-family-nl80211 cfg80211

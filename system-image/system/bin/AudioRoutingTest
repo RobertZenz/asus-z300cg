@@ -1,0 +1,206 @@
+#!/system/bin/sh
+
+#  Z300C/CG AudioRoutingTest
+
+# adb push AudioRoutingTest /data/data
+# chmod 755 /data/data/AudioRoutingTest
+
+# Generate alsa_arecord
+# adb shell mount -o remount, /dev/block/mmcblk0p6 /system
+# adb shell
+# $cd system/bin
+# $ln -s alsa_aplay alsa_arecord
+
+#set -x
+
+PLAYER=alsa_aplay
+RECORDER=alsa_arecord
+MIXER=alsa_amixer
+CTRL=alsa_ctl
+RECORD_FILE=/data/data/record.wav
+
+# Device id is 1
+# SND_HEADSET=plughw:2,0
+# SND_SPEAKER=hw:2,0
+# SND_CAPTURE=hw:2,0
+# SND_CARD=cloverviewaudio
+
+speaker_config() 
+{
+	
+}                 
+
+speaker_close()
+{
+	
+}             
+
+headset_config()
+{
+	
+}
+
+headset_close()
+{
+	
+}
+
+headset_mic_config()
+{
+	
+}
+
+headset_mic_close()
+{
+	
+}
+
+amic_config()
+{
+	
+}
+
+amic_close()
+{
+	
+}
+
+dmic_config()
+{
+	
+}
+
+dmic_close()
+{
+	
+}
+
+
+PLAYBACK()
+{                 
+	device=$1
+	filename=$2
+
+	if [ "$filename" == "" ]; then # No valid play file name
+		echo "0"
+		exit 0
+    	fi
+
+	if [ "$device" == "0" ]; then # speaker
+		echo 1 > /sys/bus/idi/devices/afe-0/sp_amp_status
+                tinyplay $filename -D 0 -d 0 -p 240 -n 16 -mfg 1 -t 1
+                echo 0 > /sys/bus/idi/devices/afe-0/sp_amp_status		
+		echo "1"
+	elif [ "$device" == "2" ]; then # headset
+		echo 0 > /sys/bus/idi/devices/afe-0/sp_amp_status
+		tinyplay $filename -D 0 -d 0 -p 240 -n 16 -mfg 1 -t 2
+		echo "1"
+	else
+		echo "0"
+	fi	
+}
+
+
+RECORD()
+{
+	record_dev=$1
+	play_dev=$2
+	record_time=$3
+
+	if [ "$record_time" == "" ]; then # No record time
+		exit 0
+	fi
+
+        tinycap $RECORD_FILE -D 0 -d 0 -c 2 -r 48000 -b 16 -p 240 -n 8 -mfg 1 -t 0 &
+            pid=$!
+            echo $!
+            sleep 1
+            kill -INT $pid
+
+            sleep 1
+
+
+	if [ "$record_dev" == "1" ]; then
+		tinycap $RECORD_FILE -D 0 -d 0 -c 2 -r 48000 -b 16 -p 240 -n 8 -mfg 1 -t 0 &
+                pid=$!
+                echo $!
+                sleep $record_time
+                kill -INT $pid
+	elif [ "$record_dev" == "4" ]; then
+		tinycap $RECORD_FILE -D 0 -d 0 -c 2 -r 48000 -b 16 -p 240 -n 8 -mfg 1 -t 1 &
+                pid=$!
+                echo $!
+                sleep $record_time
+                kill -INT $pid
+	else
+		exit 0
+	fi
+
+        sleep 1
+	
+	if [ "$play_dev" == "0" ]; then
+                echo 1 > /sys/bus/idi/devices/afe-0/sp_amp_status
+	        tinyplay $RECORD_FILE -D 0 -d 0 -p 240 -n 16 -mfg 1 -t 1
+                echo 0 > /sys/bus/idi/devices/afe-0/sp_amp_status
+		echo "1"
+	elif [ "$play_dev" == "2" ]; then
+	        echo 0 > /sys/bus/idi/devices/afe-0/sp_amp_status
+	        tinyplay $RECORD_FILE -D 0 -d 0 -p 240 -n 16 -mfg 1 -t 2
+		echo "1"
+	else
+		exit 0
+	fi        
+}
+
+
+UART()
+{
+	if [ "$1" == "0" ]; then
+		echo 1 > /sys/devices/sound.194/hs_uart_status
+	elif [ "$1" == "1" ]; then 
+		echo 0 > /sys/devices/sound.194/hs_uart_status
+	else
+		exit 0
+	fi
+}
+
+case "$1" in
+"0") 
+	PLAYBACK $2 $3
+;;
+"1")
+	RECORD $1 $2 $3 #AMIC
+;;
+"2") 
+	LOOPBACK $2 $3
+;;
+"4") 
+	RECORD $1 $2 $3 #Headset mic
+;;
+"5") 
+	RECORD $1 $2 $3 #DMIC
+;;
+"9") 
+	UART $2 
+;;
+"10") 
+	MLOOPBACK $2 $3
+;;
+"11")
+	RINGTONE $2
+;;
+"12")
+	MODEM $2 $3
+;;
+"20")
+	LOG
+;;
+*)
+	echo "Usage"
+	echo "Playback=0 [speaker=0|headset=2] PlayFileName"
+	echo "Record(AMIC)=1 [speaker=0|headset=2] RecordingTime(s)"
+	echo "Record(Headset MIC)=4 [speaker=0|headset=2] RecordingTime(s)"
+	exit 1
+;;	
+esac
+

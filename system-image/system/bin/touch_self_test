@@ -1,0 +1,11 @@
+#!/system/bin/sh
+
+
+Para1=$1
+Para2=$2
+Para3=$3
+
+/system/bin/mxt-app -t 2>&1 | busybox tail -n1
+
+ 
+

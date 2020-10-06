@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Part III: Apps that need to be hidden at system boot -->
+    <!-- list the package name that need to be hide with specific country code -->
+    <string-array name="hidden_system_packages">
+        <item>com.emusic.android</item> <!-- for US -->
+        <item>com.navitel</item> <!-- for RU -->
+        <item>ru.yandex.searchplugin</item> <!-- for RU -->
+        <item>com.yandex.browser</item> <!-- for RU -->
+        <item>ru.yandex.market</item> <!-- for RU -->
+        <item>com.skysoft.kkbox.android</item>
+        <item>tw.com.cite.reader</item>
+        <item>com.nuazure.bookbuffet</item>
+        <item>com.avast.android.mobilesecurity</item>
+        <item>tw.com.allsdk.asus.gamecenter</item> <!-- TW Only -->
+        <item>com.amazon.mShop.android.shopping</item> <!-- AMAZON -->
+        <item>com.ezding.app</item> <!-- TW Only -->
+        <item>com.inventec.dreye.dictnew.asusspread</item> <!-- TW Only -->
+        <item>com.monotype.android.font.mfinancehkbold</item> <!-- TW Only -->
+        <item>com.monotype.android.font.myuppymediumtc</item> <!-- TW Only -->
+        <item>com.monotype.android.font.myinghei18030m</item> <!-- TW Only -->
+        <item>com.yahoo.mobile.client.android.ecstore</item> <!-- TW Only -->
+        <item>com.yahoo.mobile.client.android.ecshopping</item> <!-- TW Only -->
+        <item>com.inventec.dreye.dictnewpad.asusspread</item> <!-- TW Only -->
+        <item>com.eztable.shareshopping</item> <!-- TW Only -->
+        <item>com.asus.easycall</item> <!--TW Only-->
+        <item>com.yahoo.mobile.client.android.ecauction</item> <!--TW Only -->
+    </string-array>
+
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<allapps>
+    <folder
+        title="Google">
+        <app
+            className="com.google.android.googlequicksearchbox.SearchActivity"
+            packageName="com.google.android.googlequicksearchbox" />
+        <app
+            className="com.google.android.apps.chrome.Main"
+            packageName="com.android.chrome" />
+        <app
+            className="com.google.android.gm.ConversationListActivityGmail"
+            packageName="com.google.android.gm" />
+        <app
+            className="com.google.android.maps.MapsActivity"
+            packageName="com.google.android.apps.maps" />
+        <app
+            className="com.google.android.youtube.app.honeycomb.Shell$HomeActivity"
+            packageName="com.google.android.youtube" />
+        <app
+            className="com.google.android.apps.docs.app.NewMainProxyActivity"
+            packageName="com.google.android.apps.docs" />
+        <app
+            className="com.android.music.activitymanagement.TopLevelActivity"
+            packageName="com.google.android.music" />
+        <app
+            className="com.google.android.youtube.videos.EntryPoint"
+            packageName="com.google.android.videos" />
+        <app
+            className="com.google.android.talk.SigningInActivity"
+            packageName="com.google.android.talk" />
+        <app
+            className="com.google.android.apps.photos.home.HomeActivity"
+            packageName="com.google.android.apps.photos" />
+        <app
+            className="com.google.android.apps.plus.phone.ConversationListActivity"
+            packageName="com.google.android.apps.plus" />
+        <app
+            className="com.google.android.apps.plus.phone.HomeActivity"
+            packageName="com.google.android.apps.plus" />
+        <app
+            className="com.google.android.apps.books.app.BooksActivity"
+            packageName="com.google.android.apps.books" />
+        <app
+            className="com.google.apps.dots.android.app.activity.CurrentsStartActivity"
+            packageName="com.google.android.apps.magazines" />
+        <app
+            className="com.google.android.gms.games.ui.destination.main.MainActivity"
+            packageName="com.google.android.play.games" />
+        <app
+            className="com.google.android.apps.docs.app.NewMainProxyActivity"
+            packageName="com.google.android.apps.docs.editors.docs" />
+        <app
+            className="com.google.android.apps.docs.app.NewMainProxyActivity"
+            packageName="com.google.android.apps.docs.editors.sheets" />
+        <app
+            className="com.google.android.apps.docs.app.NewMainProxyActivity"
+            packageName="com.google.android.apps.docs.editors.slides" />
+    </folder>
+    <folder
+        title="Apps4U">
+        <app
+            className="com.keniu.security.main.MainActivity"
+            packageName="com.cleanmaster.mguard" />
+        <app
+            className="com.trendmicro.tmmssuite.consumer.login.ui.LandingPage"
+            packageName="com.trendmicro.freetmms.gmobi" />
+        <app
+            className="com.amazon.kindle.UpgradePage"
+            packageName="com.amazon.kindle" />
+        <app
+            className="com.eztable.main.RankSearchActivity"
+            packageName="com.eztable.shareshopping" />
+        <app
+            className="com.truecaller.ui.TruecallerInit"
+            packageName="com.truecaller" />
+        <app
+            className="id.co.babe.ui.activity.SplashActivity"
+            packageName="id.co.babe" />
+        <app
+            className="com.eterno.Splash"
+            packageName="com.eterno" />
+        <app
+            className="com.zinio.mobile.android.reader.view.SplashScreenActivity"
+            packageName="com.zinio.mobile.android.reader" />
+        <app
+            className="com.gameloft.android.GloftPZOO.Start"
+            packageName="com.gameloft.android.GloftPZOO" />
+        <app
+            className="com.tripadvisor.tripadvisor.TripAdvisorTripAdvisorActivity"
+            packageName="com.tripadvisor.tripadvisor" />
+        <app
+            className="com.avast.android.mobilesecurity.app.home.StartActivity"
+            packageName="com.avast.android.mobilesecurity" />
+        <app
+            className="com.cloudmosa.puffinFree.LemonActivity"
+            packageName="com.cloudmosa.puffinFree" />
+    </folder>
+</allapps>

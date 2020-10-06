@@ -1,0 +1,8 @@
+#!/system/bin/sh
+
+APD_PATH="/APD"
+#chmod 775
+busybox chmod 775 -R ${APD_PATH}
+
+#chown system system
+busybox chown 1000.1000 -R ${APD_PATH}

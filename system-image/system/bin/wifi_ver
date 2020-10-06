@@ -1,0 +1,14 @@
+#!/system/bin/sh
+
+LOG_TAG=wifi_ver
+
+loge () {
+    echo "$LOG_TAG: $@"
+    /system/bin/log -t $LOG_TAG -p e "$@"
+}
+
+##########
+
+WiFi_VER="`grep "FW_TIC" /vendor/firmware/fw_info.txt | busybox sed 's/^.*=//g'`"
+loge "set WIFI FW version \"$WiFi_VER\" to property wifi.version.driver"
+setprop wifi.version.driver "$WiFi_VER"

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<favorites>
+
+    <!-- screen [0] -->
+
+    <appwidget
+        className="com.asus.weathertime.WeatherWidgetProviderPhoneThree"
+        packageName="com.asus.weathertime"
+        screen="1"
+        spanX="3"
+        spanY="2"
+        x="0"
+        y="0" />
+
+    <appwidget
+        className="com.android.contacts.miniwidget.ContactsWidget"
+        packageName="com.asus.contacts"
+        screen="1"
+        spanX="2"
+        spanY="2"
+        x="4"
+        y="0" />
+
+    <appwidget
+        className="com.asus.supernote.widget.WidgetOneProvider"
+        packageName="com.asus.supernote"
+        screen="1"
+        spanX="2"
+        spanY="2"
+        x="4"
+        y="2" />
+
+    <favorite
+        className="com.asus.music.MusicMainActivity"
+        packageName="com.asus.music"
+        screen="1"
+        x="0"
+        y="3" />
+
+    <favorite
+        className="com.asus.powersaver.PowerSaverSettings"
+        packageName="com.asus.powersaver"
+        screen="1"
+        x="1"
+        y="3" />
+
+    <!-- screen [1] -->
+
+    <favorite
+        className="com.asus.mobilemanager.MainActivity"
+        packageName="com.asus.mobilemanager"
+        screen="2"
+        x="0"
+        y="3" />
+
+    <favorite
+        className="com.asus.userfeedback.MainActivity"
+        packageName="com.asus.userfeedback"
+        screen="2"
+        x="1"
+        y="3" />
+
+    <folder
+        screen="2"
+        title="智能工具"
+        x="2"
+        y="3" >
+        <favorite
+            className="com.asus.mobilemanager.entry.FunctionActivity"
+            packageName="com.asus.mobilemanager" />
+        <favorite
+            className="com.asus.splendid.AsusSplendidActivity"
+            packageName="com.asus.splendid" />
+        <favorite
+            className="com.asus.maxxaudio.audiowizard.MainActivity"
+            packageName="com.asus.maxxaudio.audiowizard" />
+        <favorite
+            className="com.asus.systemupdate.SystemUpdateActivity"
+            packageName="com.asus.systemupdate" />
+    </folder>
+
+    <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
+    <folder
+        title="ASUS"
+        container="-101"
+        screen="0"
+        x="0"
+        y="0" >
+        <favorite
+            className="com.android.contacts.activities.PeopleActivity"
+            packageName="com.asus.contacts" />
+        <favorite
+            className="com.android.calendar.AllInOneActivity"
+            packageName="com.asus.calendar" />
+        <favorite
+            className="com.asus.task.activity.TaskActivity"
+            packageName="com.asus.task" />
+        <favorite
+            className="com.android.mms.ui.ConversationList"
+            packageName="com.asus.message" />
+        <favorite
+            className="com.asus.filemanager.activity.FileManagerActivity"
+            packageName="com.asus.filemanager" />
+        <favorite
+            className="com.asus.deskclock.DeskClock"
+            packageName="com.asus.deskclock" />
+        <favorite
+            className="com.asus.weathertime.WeatherTimeSettings"
+            packageName="com.asus.weathertime" />
+        <favorite
+            className="com.asus.calculator.Calculator"
+            packageName="com.asus.calculator" />
+        <favorite
+            className="com.asus.flashlight.FlashLightMainActivity"
+            packageName="com.asus.flashlight" />
+        <favorite
+            className="com.asus.supernote.picker.NoteBookPickerActivity"
+            packageName="com.asus.supernote" />
+        <favorite
+            className="com.asus.mydictionary.MyDictionary"
+            packageName="com.asus.mydictionary" />
+    </folder>
+
+    <favorite
+        className="com.android.browser.BrowserActivity"
+        container="-101"
+        packageName="com.asus.browser"
+        screen="1"
+        x="1"
+        y="0" />
+
+    <favorite
+        className="com.asus.mobilemanager.task.BoostShortcut"
+        container="-101"
+        packageName="com.asus.mobilemanager"
+        screen="2"
+        x="2"
+        y="0" />
+
+    <favorite
+        className="com.asus.gallery.app.EPhotoActivity"
+        container="-101"
+        packageName="com.asus.gallery"
+        screen="4"
+        x="4"
+        y="0" />
+
+    <favorite
+        className="com.asus.camera.CameraApp"
+        container="-101"
+        packageName="com.asus.camera"
+        screen="5"
+        x="5"
+        y="0" />
+
+    <favorite
+        className="com.wandoujia.p4.activity.ExploreActivity"
+        container="-101"
+        packageName="com.wandoujia.phoenix2.asus"
+        screen="6"
+        x="6"
+        y="0" />
+
+</favorites>

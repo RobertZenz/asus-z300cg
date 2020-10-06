@@ -1,0 +1,2 @@
+If put package name in this file, the bangcle workaround will ignore this app.
+Note, each package name must occupy one line without any other string.

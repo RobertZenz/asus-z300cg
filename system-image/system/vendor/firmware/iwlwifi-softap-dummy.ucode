@@ -1,0 +1,3 @@
+# we don't really need this file, it's to avoid error when the framework
+# will trigger the fwReloadSoftap function, what will lead to an error enabling the SoftAp. 
+# so we set up this for letting the function execute gracefully.

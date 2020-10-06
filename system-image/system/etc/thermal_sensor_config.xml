@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Thermal Management Configuration File -->
+<!--  Intel Corporation 2011-2014  -->
+<thermalconfig>
+  <!-- Config xml file version should be in sync with iTUX version number-->
+  <ConfigFileVersion>3.0</ConfigFileVersion>
+  <!--Platform Parameters-->
+  <PlatformInfo>
+      <!--PlatformName reference. In future, will be compared against ro.board.platform-->
+      <PlatformName>sofia3gr-garnet.0313</PlatformName>
+      <PlatformThermalStates>5</PlatformThermalStates>
+      <!--standard sensor devices register as /sys/class/thermal/thermal_zoneX. Herein
+      referred as 'Path Enumerated at Runtime by Framework in Kernel Thermal' or PERFKT-->
+  </PlatformInfo>
+
+  <!-- sensor information -->
+  <!-- cpu -->
+  <Sensor>
+      <SensorName>coretemp0</SensorName>
+      <SensorPath>auto</SensorPath>
+      <InputTemp>temp</InputTemp>
+      <HighTemp>trip_point_1_temp</HighTemp>
+      <LowTemp>trip_point_0_temp</LowTemp>
+      <UEventDevPath>auto</UEventDevPath>
+  </Sensor>
+
+  <Sensor>
+      <SensorName>coretemp1</SensorName>
+      <SensorPath>auto</SensorPath>
+      <InputTemp>temp</InputTemp>
+      <HighTemp>trip_point_1_temp</HighTemp>
+      <LowTemp>trip_point_0_temp</LowTemp>
+      <UEventDevPath>auto</UEventDevPath>
+  </Sensor>
+
+  <Sensor>
+      <SensorName>coretemp3</SensorName>
+      <SensorPath>auto</SensorPath>
+      <InputTemp>temp</InputTemp>
+      <HighTemp>trip_point_1_temp</HighTemp>
+      <LowTemp>trip_point_0_temp</LowTemp>
+      <UEventDevPath>auto</UEventDevPath>
+  </Sensor>
+  
+  <!-- close to spcu -->
+  <Sensor>
+      <SensorName>coretemp4</SensorName>
+      <SensorPath>auto</SensorPath>
+      <InputTemp>temp</InputTemp>
+      <HighTemp>trip_point_1_temp</HighTemp>
+      <LowTemp>trip_point_0_temp</LowTemp>
+      <UEventDevPath>auto</UEventDevPath>
+  </Sensor>
+
+  <!-- close to gpu -->
+  <Sensor>
+      <SensorName>coretemp5</SensorName>
+      <SensorPath>auto</SensorPath>
+      <InputTemp>temp</InputTemp>
+      <HighTemp>trip_point_1_temp</HighTemp>
+      <LowTemp>trip_point_0_temp</LowTemp>
+      <UEventDevPath>auto</UEventDevPath>
+  </Sensor>
+
+  <!-- AG620 on-die-sensor -->
+  <Sensor>
+      <SensorName>pmictemp</SensorName>
+      <SensorPath>auto</SensorPath>
+      <InputTemp>temp</InputTemp>
+      <HighTemp>trip_point_1_temp</HighTemp>
+      <LowTemp>trip_point_0_temp</LowTemp>
+      <UEventDevPath>auto</UEventDevPath>
+  </Sensor>
+
+  <Sensor>
+      <SensorName>battery</SensorName>
+      <SensorPath>auto</SensorPath>
+      <InputTemp>temp</InputTemp>
+      <HighTemp>trip_point_1_temp</HighTemp>
+      <LowTemp>trip_point_0_temp</LowTemp>
+      <UEventDevPath>auto</UEventDevPath>
+  </Sensor>
+
+
+
+  <Zone>
+        <ZoneID>0</ZoneID>
+        <ZoneName>core 1</ZoneName>
+        <ZoneLogic>Raw</ZoneLogic>
+        <SupportsUEvent>1</SupportsUEvent>
+        <DebounceInterval>2000</DebounceInterval>
+        <PollDelay>
+            <DelayNormal>1000</DelayNormal>
+            <DelayWarning>1000</DelayWarning>
+            <DelayAlert>1000</DelayAlert>
+        </PollDelay>
+        <ZoneThreshold>
+            <ZoneThresholdNormal>65000</ZoneThresholdNormal>
+            <ZoneThresholdWarning>90000</ZoneThresholdWarning>
+            <ZoneThresholdAlert>105000</ZoneThresholdAlert>
+        </ZoneThreshold>
+        <SensorAttrib>
+            <SensorName>coretemp1</SensorName>
+        </SensorAttrib>
+  </Zone>
+
+
+  <Zone>
+        <ZoneID>1</ZoneID>
+        <ZoneName>gpu</ZoneName>
+        <ZoneLogic>Raw</ZoneLogic>
+        <SupportsUEvent>1</SupportsUEvent>
+        <DebounceInterval>2000</DebounceInterval>
+        <PollDelay>
+            <DelayNormal>1000</DelayNormal>
+            <DelayWarning>1000</DelayWarning>
+            <DelayAlert>1000</DelayAlert>
+        </PollDelay>
+        <ZoneThreshold>
+            <ZoneThresholdNormal>85000</ZoneThresholdNormal>
+            <ZoneThresholdWarning>95000</ZoneThresholdWarning>
+            <ZoneThresholdAlert>105000</ZoneThresholdAlert>
+        </ZoneThreshold>
+        <SensorAttrib>
+            <SensorName>coretemp5</SensorName>
+        </SensorAttrib>
+  </Zone>
+
+  <!-- below is the example of skin temperature control with moving average function by using coretemp0, moving average can help to emulate the time-constant effect between junction temperature and system skin.
+  the proper parameters such as ZoneThreshold (milli-deg-C), MovingAverageWindow (milli-second) needs to be defined by your system characteristics-->
+  <Zone> 
+        <ZoneID>2</ZoneID>
+        <ZoneName>backskin</ZoneName>
+        <ZoneLogic>Raw</ZoneLogic>
+        <SupportsUEvent>0</SupportsUEvent>
+        <DebounceInterval>1000</DebounceInterval>
+        <PollDelay>
+            <DelayNormal>1000</DelayNormal>
+            <DelayWarning>1000</DelayWarning>
+            <DelayAlert>1000</DelayAlert>
+        </PollDelay>
+        <ZoneThreshold>
+            <ZoneThresholdNormal>55000</ZoneThresholdNormal>
+            <ZoneThresholdWarning>62000</ZoneThresholdWarning>
+            <ZoneThresholdAlert>78000</ZoneThresholdAlert>
+        </ZoneThreshold>
+		<MovingAverageWindow>
+			<WindowNormal>400000</WindowNormal>
+			<WindowWarning>300000</WindowWarning>
+			<WindowAlert>1000</WindowAlert>
+		</MovingAverageWindow>
+        <SensorAttrib>
+            <SensorName>coretemp0</SensorName>
+        </SensorAttrib>
+  </Zone>
+
+
+</thermalconfig>

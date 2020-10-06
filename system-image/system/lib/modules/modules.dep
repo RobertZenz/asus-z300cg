@@ -1,0 +1,12 @@
+updates/compat/compat_compat.ko:
+updates/drivers/net/wireless/iwlwifi/mvm/iwlmvm.ko: updates/net/mac80211/compat_mac80211.ko updates/drivers/net/wireless/iwlwifi/compat_iwlwifi.ko updates/net/wireless/compat_cfg80211.ko updates/compat/compat_compat.ko
+updates/drivers/net/wireless/iwlwifi/compat_iwlwifi.ko: updates/net/wireless/compat_cfg80211.ko updates/compat/compat_compat.ko
+updates/drivers/net/wireless/iwlwifi/xvt/compat_iwlxvt.ko: updates/drivers/net/wireless/iwlwifi/compat_iwlwifi.ko updates/net/wireless/compat_cfg80211.ko updates/compat/compat_compat.ko
+updates/net/wireless/compat_cfg80211.ko: updates/compat/compat_compat.ko
+updates/net/mac80211/compat_mac80211.ko: updates/net/wireless/compat_cfg80211.ko updates/compat/compat_compat.ko
+kernel/drivers/idi/peripherals/btif_drv.ko:
+kernel/net/wireless/cfg80211.ko:
+kernel/net/mac80211/mac80211.ko: kernel/net/wireless/cfg80211.ko
+extra/tntfs.ko:
+extra/gnss_drv.ko:
+extra/texfat.ko:

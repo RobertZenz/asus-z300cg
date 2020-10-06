@@ -1,0 +1,24 @@
+#!/system/bin/sh
+
+WRITE_LOG="log -p d -t LogT-Last-KLOG"
+
+set -x
+
+BOOTUP_TIME=`timestamp`
+BOOTUP_ID=`cat /proc/sys/kernel/random/boot_id`
+
+# Create path
+OUTDIR_LKMSG="/data/logs/lkmsg"
+mkdir -p $OUTDIR_LKMSG
+if [ ! -w "$OUTDIR_LKMSG" ]; then
+    $WRITE_LOG "lkmsg: $OUTDIR_LKMSG not writable"
+    exit 1
+fi
+sync
+
+# dump last kernel message
+ENABLE_LKMSG=`getprop persist.logtool.last_kmsg`
+if [ "$ENABLE_LKMSG" == "1" ]; then
+    $WRITE_LOG "Start dump lkmsg to $OUTDIR"
+	  cat /sys/fs/pstore/console-ramoops > $OUTDIR_LKMSG/lkmsg-$BOOTUP_ID-$BOOTUP_TIME.log
+fi

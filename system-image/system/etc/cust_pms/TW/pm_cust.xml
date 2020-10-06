@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Part III: Apps that need to be hidden at system boot -->
+    <!-- list the package name that need to be hide with specific country code -->
+    <string-array name="hidden_system_packages">
+        <item>com.asus.brapp</item> <!-- for brazil -->
+        <item>com.emusic.android</item> <!-- for US -->
+        <item>com.navitel</item> <!-- for RU -->
+        <item>ru.yandex.searchplugin</item> <!-- for RU -->
+        <item>com.yandex.browser</item> <!-- for RU -->
+        <item>ru.yandex.market</item> <!-- for RU -->
+        <item>com.avast.android.mobilesecurity</item>
+        <item>com.amazon.mShop.android.shopping</item> <!-- AMAZON -->
+        <item>com.monotype.android.font.felbridge</item> <!-- for not TW -->
+        <item>com.monotype.android.font.syndor</item> <!-- for not TW -->
+    </string-array>
+
+</resources>

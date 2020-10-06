@@ -1,0 +1,39 @@
+# STM external FW info
+
+# link to STM FW build:
+FW_LOCATION=REMOVED
+
+# P4 changelist id(unique id):
+FW_CHANGE_LIST=236354
+
+# STM build tag(Wibars Tracker):
+FW_TIC=WFFW18885
+
+# P4 DEPOT (repository):
+FW_DEPOT=WCS_WIFI_FW
+
+# P4 branch:
+FW_STREAM=CoreCycle1_stab_linux
+
+# P4 commit owner
+FW_COMMITTER=REMOVED
+
+# job submitter name:
+FW_SUBMITTER_NAME=scmbuild
+
+# internal FW info
+
+# jenkins project name
+FW_BUILD_NAME=fw-binary-push-CoreCycle1_stab
+
+# jenkins project job number
+FW_PARAMETER=229
+
+# FW job full URL
+FW_BUILD_URL=REMOVED
+
+# jenkins FW job name
+FW_JOB_NAME=fw-binary-push-CoreCycle1_stab
+
+# windows style link to firmware build:
+FW_LOCATION_WIN=\\\\amr.corp.intel.com\\ec\\proj\\DPGEC\\iag\\mwg\\COMP_Builds\\WFFW_P4\\WFFW18885\\Layout\\WFFW18885G.zip

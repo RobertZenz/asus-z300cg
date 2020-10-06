@@ -1,0 +1,26 @@
+#!/system/bin/sh
+
+LOG_TAG=WifiMacToProp
+
+loge () {
+    echo "$LOG_TAG: $@"
+    /system/bin/log -t $LOG_TAG -p e "$@"
+}
+
+##########
+
+#Write WiFi MAC address to property ro.wifimac
+#if test -d /factory/.readWifiMac
+#then
+#    loge ".readWifiMac exist."
+    MAC=`netcfg | grep wlan0 | busybox_wifi awk '{print $5}'`
+
+    #selinux don't allow to write ro.xxxx property!!
+    loge "write WIFI MAC $MAC to property wifi.wifimac"
+    setprop wifi.wifimac "$MAC"
+#else
+#    loge ".readWifiMac not exist. Do nothing!"
+#fi
+
+#rm -rf /factory/.readWifiMac
+

@@ -1,0 +1,41 @@
+#!/system/bin/sh
+
+
+Para1=$1
+Para2=$2
+Para3=$3
+
+#echo $PATH
+fail() {
+  echo
+  echo FAIL: wrong input Parameter
+  exit 0
+}
+
+#echo $0 $Para1 $Para2
+
+if [ "$Para1" == "" ] || [ "$Para3" != "" ]; then
+  fail
+fi
+
+
+case $Para1 in
+
+  "0")
+  	cat /sys/bus/i2c/devices/4-004a/disable_gpio
+	
+  	echo "Disable OK"
+   ;;
+
+  "1")
+  	cat /sys/bus/i2c/devices/4-004a/enable_gpio
+	
+  	echo "Enable OK"
+   ;;
+
+  *)
+    fail
+    ;;
+
+esac    
+

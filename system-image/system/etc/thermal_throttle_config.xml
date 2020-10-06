@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Thermal Management Configuration File -->
+<!--  Intel Corporation 2011-2014  -->
+<thermalthrottleconfig>
+  <!-- Config xml file version should be in sync with iTUX version number-->
+  <ConfigFileVersion>3.0</ConfigFileVersion>
+
+  <!--Platform Parameters-->
+  <PlatformInfo>
+      <!--PlatformName reference. In future will be compared against ro.board.platform-->
+      <PlatformName>sofia3gr-garnet.0313</PlatformName>
+      <!--standard cooling devices register in /sys/class/thermal/cooling_deviceX/ Herein
+      referred as 'Path Enumerated at Runtime by Framework in Kernel Thermal' or PERFKT-->
+  </PlatformInfo>
+
+  <!--Cooling Devices-->
+  <ContributingDeviceInfo>
+    <CDeviceName>CPU</CDeviceName>
+    <CDeviceID>1</CDeviceID>
+    <CDeviceClassPath>com.intel.thermal.CPUMaxFreqControl</CDeviceClassPath>
+    <CDeviceThrottlePath>/sys/devices/system/cpu/cpu0/cpufreq/thermal_scaling_max_freq</CDeviceThrottlePath>
+    <ThrottleValues>
+      <ThrottleNormal>900000</ThrottleNormal>
+      <ThrottleWarning>900000</ThrottleWarning>
+      <ThrottleAlert>728000</ThrottleAlert>
+      <ThrottleCritical>416000</ThrottleCritical>
+    </ThrottleValues>
+  </ContributingDeviceInfo>
+
+  <!--To enable charge rate control, it needs to have specific proper kernel driver correspond with your charger HW, please be noted-->
+  <!--ContributingDeviceInfo>
+    <CDeviceName>charger</CDeviceName>
+    <CDeviceID>2</CDeviceID>
+    <CDeviceClassPath>com.intel.thermal.BatteryChargeCurrentControl</CDeviceClassPath>
+    <CDeviceThrottlePath>auto</CDeviceThrottlePath>
+    <ThrottleValues>
+      <ThrottleNormal>1200</ThrottleNormal>
+      <ThrottleWarning>900</ThrottleWarning>
+      <ThrottleAlert>500</ThrottleAlert>
+      <ThrottleCritical>500</ThrottleCritical>
+    </ThrottleValues>
+  </ContributingDeviceInfo-->
+
+  <ContributingDeviceInfo>
+    <CDeviceName>Display</CDeviceName>
+    <CDeviceID>3</CDeviceID>
+    <CDeviceClassPath>com.intel.thermal.BrightnessControl</CDeviceClassPath>
+    <ThrottleValues>
+      <ThrottleNormal>100</ThrottleNormal>
+      <ThrottleWarning>80</ThrottleWarning>
+      <ThrottleAlert>40</ThrottleAlert>
+      <ThrottleCritical>40</ThrottleCritical>
+    </ThrottleValues>
+  </ContributingDeviceInfo>
+
+  <ContributingDeviceInfo>
+    <CDeviceName>GPU</CDeviceName>
+    <CDeviceID>4</CDeviceID>
+    <CDeviceClassPath>com.intel.thermal.GPUMaxFreqControl</CDeviceClassPath>
+    <CDeviceThrottlePath>/sys/class/mali/pm/max_freq_level</CDeviceThrottlePath>
+    <ThrottleValues>
+      <ThrottleNormal>4</ThrottleNormal>
+      <ThrottleWarning>3</ThrottleWarning>
+      <ThrottleAlert>3</ThrottleAlert>
+      <ThrottleCritical>2</ThrottleCritical>
+    </ThrottleValues>
+  </ContributingDeviceInfo>
+
+
+  <!--Map the cooling devices with specfic zones for throttling-->
+
+  <ZoneThrottleInfo>
+    <ZoneID>0</ZoneID>
+    <CriticalShutDown>0</CriticalShutDown>
+    <CoolingDeviceInfo>
+      <CoolingDevId>1</CoolingDevId>
+    </CoolingDeviceInfo>
+  </ZoneThrottleInfo>
+
+
+  <ZoneThrottleInfo>
+    <ZoneID>1</ZoneID>
+    <CriticalShutDown>0</CriticalShutDown>
+	
+    <CoolingDeviceInfo>
+      <CoolingDevId>4</CoolingDevId>
+    </CoolingDeviceInfo>
+	
+    <CoolingDeviceInfo>
+      <CoolingDevId>1</CoolingDevId>
+    </CoolingDeviceInfo>
+	
+  </ZoneThrottleInfo>
+
+  <ZoneThrottleInfo>
+    <ZoneID>2</ZoneID>
+    <CriticalShutDown>0</CriticalShutDown>
+
+    <CoolingDeviceInfo>
+      <CoolingDevId>1</CoolingDevId>
+    </CoolingDeviceInfo>
+	
+    <CoolingDeviceInfo>
+      <CoolingDevId>4</CoolingDevId>
+    </CoolingDeviceInfo>
+
+ </ZoneThrottleInfo>
+ 
+</thermalthrottleconfig>
+
